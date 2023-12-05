@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liga SMK</title>
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600&display=swap');
+
+        * {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .navbar {
+            background-color: #FFFFFF;
+            height: 60px;
+        }
+
+        .nav-text {
+            margin-top: 10px;
+            margin-right: 220px;
+            font-weight: 600;
+            gap: 25px;
+            list-style-type: none;
+        }
+
+        .nav-text>li>a {
+            text-decoration: none;
+        }
+
+        .navbar-brand {
+            margin-left: 220px;
+            width: 100px;
+        }
+
+        .nav-home {
+            color: #2f3034;
+        }
+
+        .nav-about {
+            color: #2f3034;
+        }
+
+        .nav-kelas {
+            color: #2f3034;
+        }
+
+        .nav-blog {
+            color: #2f3034;
+        }
+
+        .nav-kontak {
+            color: #2f3034;
+        }
+
+        .nav-home:hover {
+            transition: color 0.3s ease;
+            color: #3a10e5;
+        }
+
+        .nav-about:hover {
+            transition: color 0.3s ease;
+            color: #3a10e5;
+        }
+
+        .nav-kelas:hover {
+            transition: color 0.3s ease;
+            color: #3a10e5;
+        }
+
+        .nav-blog:hover {
+            transition: color 0.3s ease;
+            color: #3a10e5;
+        }
+
+        .nav-kontak:hover {
+            transition: color 0.3s ease;
+            color: #3a10e5;
+        }
+
+        .hero {
+            background-color: #f0f2ff;
+            height: 100vh;
+        }
+
+        .hero-item {
+            padding-top: 50px;
+            padding-left: 200px;
+            padding-right: 200px;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .hero-text {
+            margin-top: 30px;
+        }
+
+        .hero-text>h1 {
+            width: 400px;
+            font-weight: 600;
+            font-size: 45px;
+        }
+
+        .hero-text>p {
+            margin-top: 20px;
+            width: 400px;
+            color: #707070;
+        }
+
+        .hero-image {
+            margin-top: -10px;
+            margin-left: 150px;
+        }
+
+        .button {
+            margin-top: 35px;
+        }
+
+        .btn-hero {
+            text-decoration: none;
+            background-color: #3a10e5;
+            color: #FFFFFF;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 14px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .btn-hero:hover {
+            text-decoration: none;
+            background-color: #5328ff;
+            color: #FFFFFF;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            font-size: 14px;
+            width: 200px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow {
+            margin-left: 50px;
+        }
+
+        .konten-tujuan {
+            height: 170px;
+            background-color: #facb3b;
+            margin-bottom: 100px;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .konten {
+            display: flex;
+            padding-top: 50px;
+            margin: 0 30px 0 30px;
+        }
+
+        .text-konten {
+            margin-left: 30px;
+            margin-top: 23px;
+        }
+
+        .text-konten>h5 {
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .text-konten>p {
+            font-size: 13px;
+            margin-top: -5px;
+        }
+
+        .pembelajaran {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .text-pembelajaran {
+            margin-left: 80px;
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 13px;
+            gap: 10px;
+            list-style-type: none;
+        }
+
+        .text-pembelajaran>li>a {
+            text-decoration: none;
+            color: #a1a1a1;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .text-pembelajaran>li>a:hover {
+            text-decoration: none;
+            color: #000000;
+            border: 1px solid white;
+            padding: 10px 10px 10px 10px;
+            border-radius: 3px;
+            box-shadow: -1px 1px 19px 0px rgba(0, 0, 0, 0.24);
+            -webkit-box-shadow: -1px 1px 19px 0px rgba(0, 0, 0, 0.24);
+            -moz-box-shadow: -1px 1px 19px 0px rgba(0, 0, 0, 0.24);
+            transition: color, box-shadow 0.3s ease;
+        }
+
+        .text-kiri {
+            margin-right: 70px;
+            font-weight: 700;
+        }
+
+        .garis {
+            background-color: #fdd5a1;
+            height: 10px;
+            width: 90px;
+            margin-top: 10px;
+            margin-right: 515px;
+            z-index: -1;
+            position: absolute;
+        }
+
+        .card-pembelajaran {
+            margin-bottom: 20px;
+            border: 2px solid #f3f3f3;
+            width: 222px;
+            height: 290px;
+        }
+
+        .card-text {
+            margin: 30px 40px 0 30px;
+        }
+
+        .card-text>p {
+            color: #3a10e5;
+            font-weight: 600;
+            margin-top: -10px;
+            font-size: 12px;
+        }
+
+        .card-text>h6 {
+            margin-top: -10px;
+            font-weight: 800;
+            font-size: 12px;
+        }
+
+        .text-card-kecil {
+            gap: 5px;
+            font-weight: 400;
+            font-size: 11px;
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        .label-new {
+            position: absolute;
+            z-index: 1;
+            margin: 15px;
+        }
+
+        .card-flex {
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-card {
+            width: 12px;
+        }
+
+        .membership {
+            margin-top: 100px;
+            margin-bottom: 70px;
+            gap: 60px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            background-color: #fff0e5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .membership>img {
+            width: 170px;
+        }
+
+        .membership>h2 {
+            font-weight: 700;
+        }
+
+        .membership>a {
+            text-decoration: none;
+            padding: 10px 40px 10px 20px;
+            color: #FFFFFF;
+            border-radius: 5px;
+            font-size: 13px;
+            background-color: #3a10e5;
+        }
+
+        .membership>a:hover {
+            text-decoration: none;
+            padding: 10px 40px 10px 20px;
+            color: #FFFFFF;
+            border-radius: 5px;
+            font-size: 13px;
+            background-color: #5328ff;
+            transition: background-color 0.3s ease;
+        }
+
+        .kategori {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .kategori>h3 {
+            font-weight: 600;
+        }
+
+        .kategori-baris {
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .kat-bg {
+            background-color: #FFFFFF;
+            width: 230px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .item-kategori {
+            gap: 20px;
+            padding: 5px;
+        }
+
+        .text-kategori {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-kategori>h6 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .text-kategori>p {
+            font-size: 12px;
+            margin-top: -10px;
+            color: #707070;
+        }
+
+        .garis-kategori {
+            background-color: #fdd5a1;
+            margin-left: 640px;
+            margin-top: -20px;
+            height: 10px;
+            width: 100px;
+            z-index: -1;
+            position: absolute;
+        }
+
+        .circle-icon {
+            margin-top: 5px;
+            text-decoration: none;
+            margin-left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #f0f3ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .circle-icon>img {
+            width: 25px;
+        }
+
+        .explore{
+            text-decoration: none;
+        }
+
+        .text-explore {
+            margin-top: 40px;
+            margin-bottom: 100px;
+            color: #3a10e5;
+            font-weight: 700;
+        }
+
+        .card-skill {
+            background-color: #f0f3ff;
+            width: 80%;
+            height: 450px;
+            border-radius: 5px;
+        }
+
+        .card-item {
+            justify-content: center;
+            padding: 100px 150px 150px 150px;
+            gap: 40px;
+        }
+
+        .text-card-skill>h1 {
+            font-weight: 600;
+            text-align: justify;
+        }
+
+        .text-card-skill>p {
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .text-card-skill>a {
+            background-color: #3a10e5;
+            padding: 10px;
+            color: #FFFFFF;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 300px;
+        }
+
+        .event {
+            margin-top: 100px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 100px;
+        }
+
+        .garis-event{
+            background-color: #fdd5a1;
+            margin-left: 520px;
+            margin-top: -20px;
+            height: 15px;
+            width: 290px;
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img class="navbar-brand" src="assets/img/logo-ligasmk-dark.png">
+            <ul class="ms-auto nav-text d-flex">
+                <li>
+                    <a class="nav-home" href="#">Home <img src="assets/img/icon-arrow-bottom.svg"></a>
+                </li>
+                <li>
+                    <a class="nav-about" href="#">About <img src="assets/img/icon-arrow-bottom.svg"></a>
+                </li>
+                <li>
+                    <a class="nav-kelas" href="#">Kelas <img src="assets/img/icon-arrow-bottom.svg"></a>
+                </li>
+                <li>
+                    <a class="nav-blog" href="#">Blog <img src="assets/img/icon-arrow-bottom.svg"></a>
+                </li>
+                <li>
+                    <a class="nav-kontak" href="#">Kontak</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- hero -->
+        <div class="hero">
+            <div class="hero-item">
+                <div class="hero-text">
+                    <h1>Bergabunglah dengan jutaan orang dan<br> belajar hal baru</h1>
+                    <p>Mengubah kehidupan, bisnis, dan bangsa melalui transformasi talenta di bidang teknologi digital.
+                    </p>
+                    <div class="button">
+                        <a href="#" class="btn-hero">Mulai Belajar <img class="arrow"
+                                src="assets/img/icon-arrowlong-right.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/shape-diagram.png" width="350px">
+                </div>
+            </div>
+        </div>
+        <!-- end hero -->
+
+        <div class="konten-tujuan">
+            <div class="flex">
+                <div class="konten">
+                    <img src="assets/img/icon-online-education.svg" width="50px">
+                    <div class="text-konten">
+                        <h5>Membangun Karir</h5>
+                        <p>Semua yang butuh kerja</p>
+                    </div>
+                </div>
+                <div class="konten">
+                    <img src="assets/img/icon-globe-handphone.svg" width="35px">
+                    <div class="text-konten">
+                        <h5>Cari Materi belajar</h5>
+                        <p>Seberapa pengetahuan kamu</p>
+                    </div>
+                </div>
+                <div class="konten">
+                    <img src="assets/img/icon-online-education-laptop.svg" width="50px">
+                    <div class="text-konten">
+                        <h5>Kuasai Skill Baru</h5>
+                        <p>Fokus apa yang dibutuhkan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pembelajaran">
+            <h4 class="text-kiri">Pembelajaran Populer</h4>
+            <div class="garis"></div>
+            <ul class="text-pembelajaran d-flex">
+                <li>
+                    <a href="">Javascript</a>
+                </li>
+                <li>
+                    <a href="">Python</a>
+                </li>
+                <li>
+                    <a href="">Web Development</a>
+                </li>
+                <li>
+                    <a href="">Art & Design</a>
+                </li>
+                <li>
+                    <a href="">Business</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="d-flex card-flex">
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-orange.png" width="40px">
+                <img src="assets/img/course-1.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-old-blue.png" width="40px">
+                <img src="assets/img/course-2.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-pink.png" width="40px">
+                <img src="assets/img/course-3.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-lightblue.png" width="40px">
+                <img src="assets/img/course-4.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex card-flex">
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-orange.png" width="40px">
+                <img src="assets/img/course-5.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-old-blue.png" width="40px">
+                <img src="assets/img/course-6.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-pink.png" width="40px">
+                <img src="assets/img/course-7.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-pembelajaran">
+                <img class="label-new" src="assets/img/new-lightblue.png" width="40px">
+                <img src="assets/img/course-8.png" width="220px">
+                <div class="card-text">
+                    <p>Alen Mask</p>
+                    <h6>Why Learn Intermediate SQL for Marketers?</h6>
+                </div>
+                <ul class="text-card-kecil d-flex">
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-hamburger.svg">
+                    </li>
+                    <li>
+                        <P>Beginner</P>
+                    </li>
+                    <br>
+                    <li>
+                        <img class="icon-card" src="assets/img/icon-copy.svg">
+                    </li>
+                    <li>
+                        <P>3 Lessons</P>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="membership">
+            <img src="assets/img/membership-image.png">
+            <h2>Dapatkan membership Pro<br> GRATIS untuk kelas kamu.</h2>
+            <a href="#">Lihat semua kelas.</a>
+        </div>
+
+        <div class="kategori">
+            <h3>Kategori Populer</h3>
+            <div class="garis-kategori"></div>
+        </div>
+
+
+        <div class="kategori-baris d-flex">
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-chemical.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Kimia</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-calendar.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Managemen</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-pencil-ruler.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Seni Budaya</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-briefcase.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Bisnis</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kategori-baris d-flex">
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-science.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Astrologi</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-rocket.png"></div>
+                    <div class="text-kategori">
+                        <h6>SEO</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-space.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Kosmologi</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="kat-bg shadow-sm">
+                <div class="item-kategori d-flex">
+                    <div class="circle-icon"><img src="assets/img/icon-microscope.svg"></div>
+                    <div class="text-kategori">
+                        <h6>Biologi</h6>
+                        <p>2 Kelas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="explore">
+            <h6 class="text-explore" align="center">Explore All Courses <img src="assets/img/icon-double-next.svg"></h6>
+        </a>
+        <center>
+            <div class="card-skill">
+                <div class="card-item d-flex">
+                    <img src="assets/img/business-image.png" width="280px">
+                    <div class="text-card-skill">
+                        <h1>Tingkatkan skill tim<br> Anda.</h1>
+                        <p>Berikan tim Anda pengetahuan, pengalaman, dan keyakinan<br> yang mereka butuhkan untuk
+                            mengatasi
+                            setiap
+                            masalah.<br>
+                            Kami ingin menciptakan dunia di mana siapa pun dapat<br> membangun sesuatu yang bermakna.
+                        </p>
+                        <a href="#">Try For Bussines</a>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <div class="event">
+            <h2>Event Sedang berlangsung di dekatmu</h2>
+            <div class="garis-event"></div>
+        </div>
+        
+    
+        <!-- Belum Selesai Hehehehe -->
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

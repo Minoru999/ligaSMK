@@ -1,0 +1,58 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-text{
+    margin-right: 220px;
+    font-weight: 600;
+}
+
+.navbar-brand{
+    margin-left: 220px;
+    width: 100px;
+}
+
+.nav-home{
+    color: #000000;
+}
+
+.nav-about{
+    color: #000000;
+}
+
+.nav-kelas{
+    color: #000000;
+}
+
+.nav-blog{
+    color: #000000;
+}
+
+.nav-kontak{
+    color: #000000;
+}
+
+.nav-home:hover{
+    transition: color 0.3s ease;
+    color: #3a10e5;
+}
+
+.nav-about:hover{
+    transition: color 0.3s ease;
+    color: #3a10e5;
+}
+
+.nav-kelas:hover{
+    transition: color 0.3s ease;
+    color: #3a10e5;
+}
+
+.nav-blog:hover{
+    transition: color 0.3s ease;
+    color: #3a10e5;
+}
+
+.nav-kontak:hover{
+    transition: color 0.3s ease;
+    color: #3a10e5;
+}
